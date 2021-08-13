@@ -433,7 +433,7 @@ class GenerationMixin:
 
     def _get_pad_token_id(self, pad_token_id: int = None, eos_token_id: int = None) -> int:
         if pad_token_id is None and eos_token_id is not None:
-            logger.warning(f"Setting `pad_token_id` to `eos_token_id`:{eos_token_id} for open-end generation.")
+            #logger.warning(f"Setting `pad_token_id` to `eos_token_id`:{eos_token_id} for open-end generation.")
             pad_token_id = eos_token_id
         return pad_token_id
 
@@ -952,7 +952,7 @@ class GenerationMixin:
 
         # special case if pad_token_id is not defined
         if pad_token_id is None and eos_token_id is not None:
-            logger.warning(f"Setting `pad_token_id` to `eos_token_id`:{eos_token_id} for open-end generation.")
+            #logger.warning(f"Setting `pad_token_id` to `eos_token_id`:{eos_token_id} for open-end generation.")
             pad_token_id = eos_token_id
 
         # Storing encoder_input_ids for logits_processor that could use them
